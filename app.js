@@ -21,8 +21,6 @@ for(let i = 1; i<=10;i++){
 salida += `${base} x ${i} = ${base * i}\n`;
 
 }
-fs.writeFile(  'tabla-3.txt', salida, (err) => {
-    if (err) throw err;
+fs.writeFileSync(  'tabla-3.txt', salida);
 
-    console.log('tabla-3.txt creado con exito');
-}  )
+console.log(`Tabla-${base}.txt creado.`);
