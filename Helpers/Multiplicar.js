@@ -1,6 +1,7 @@
- const crearArchivo = () => {
+ const fs = require('fs');
+ const crearArchivo = (base = 5) => {
 console.log('=====================');
-console.log('     Tabla del:',base);
+console.log('     Tabla del:', base);
 console.log('=====================');
     
     
@@ -13,6 +14,13 @@ console.log('=====================');
     fs.writeFileSync(   `tabla-${base}.txt`, salida);
     
     console.log(`Tabla-${base}.txt creado.`);
+
+
+
+ }
+
+ module.exports ={
+crearArchivo
 
 
 

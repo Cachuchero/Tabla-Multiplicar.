@@ -9,18 +9,8 @@
 // 5 x 9 =  45
 // 5 x 10 =  50
 
-const fs = require('fs')
-
-console.clear();
-console.log('=====================')
-console.log('     Tabla del 3')
-console.log('=====================')
 const base = 3;
-let salida = '';
-for(let i = 1; i<=10;i++){
-salida += `${base} x ${i} = ${base * i}\n`;
+const {crearArchivo} = require('./Helpers/Multiplicar');
+console.clear();
 
-}
-fs.writeFileSync(  'tabla-3.txt', salida);
-
-console.log(`Tabla-${base}.txt creado.`);
+crearArchivo(base);
